@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteErrores" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c3ad2f09-99b5-4e03-9be7-9b77392b7a46">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fila" class="java.lang.Integer">
+		<fieldDescription><![CDATA[fila]]></fieldDescription>
+	</field>
+	<field name="error" class="java.lang.String">
+		<fieldDescription><![CDATA[error]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="133" y="0" width="288" height="30" uuid="8d6948f9-2745-40a4-9917-0d4d83152825"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Reporte de Errores Cargue Administradoras]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="15" uuid="c5d82075-ef14-4668-857b-b15321c74e7b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3fc0f28b-f1c7-4d0f-8550-275aa37a9382"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Fila]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="475" height="15" uuid="cfdc3206-62d1-4022-a5d5-d2d4fe88e28b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8093b7ff-1f9f-412b-8c83-200cfb713c31"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Error]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="30" uuid="fcb657df-789a-45c7-9bff-e53e2156bdff">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3fc0f28b-f1c7-4d0f-8550-275aa37a9382"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{fila}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="475" height="30" uuid="6c59d0a0-9111-48ee-95be-4cf4bd4931fb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8093b7ff-1f9f-412b-8c83-200cfb713c31"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{error}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,77 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</h:head>
+
+<h:body>
+	<h:form id="formDialog" enctype="multipart/form-data">
+		<p:messages id="msg" />
+		<p:growl id="men" />
+
+		<p:panel id="pnlAdministradoras" header="Cargue Administradoras">
+			<p:panelGrid columns="2">
+
+				<p:fileUpload label="Seleccionar" id="fuFileAdministradoras"
+					allowTypes="/(\.|\/)(txt)$/"
+					value="#{cargueAdministradorasView.fileAdministradoras}"
+					mode="simple" skinSimple="true"
+					invalidFileMessage="Tipo de archivo no válido" />
+
+				<p:commandButton value="Cargar Archivo"
+					icon="ui-icon-arrowthick-1-n" ajax="false"
+					oncomplete="PrimeFaces.monitorDownload(null, updateForm)"
+					update="pnlAdministradoras">
+					<p:fileDownload
+						value="#{cargueAdministradorasView.fileErrorsCargueAdministradoras}" />
+				</p:commandButton>
+			</p:panelGrid>
+
+			<p:dataTable id="dtAdministradoras" widgetVar="dtAdministradoras"
+				var="item" rows="10" paginator="true"
+				value="#{cargueAdministradorasView.administradoras}"
+				emptyMessage="No hay administradoras" paginatorPosition="bottom"
+				paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}">
+
+				<p:column headerText="Código" style="width: 40px;">
+					<h:outputText value="#{item.codigo}" />
+				</p:column>
+				<p:column headerText="Nombre" style="width: 200px;">
+					<h:outputText value="#{item.nombre}" />
+				</p:column>
+				<p:column headerText="Tipo Identificación" style="width: 70px;">
+					<h:outputText value="#{item.codTpId}" />
+				</p:column>
+				<p:column headerText="Número Identificación" style="width: 100px;">
+					<h:outputText value="#{item.nroId}" />
+				</p:column>
+				<p:column headerText="Naturaleza" style="width: 100px;">
+					<h:outputText value="#{item.naturaleza}" />
+				</p:column>
+				<p:column headerText="Múltiple ARP" style="width: 50px;">
+					<h:outputText value="#{item.multipleArp}" />
+				</p:column>
+				<p:column headerText="FSP" style="width: 50px;">
+					<h:outputText value="#{item.fsp}" />
+				</p:column>
+				<p:column headerText="Fusionada" style="width: 50px;">
+					<h:outputText value="#{item.fusionada}" />
+				</p:column>
+				<p:column headerText="Fecha Fusión" style="width: 200px;">
+					<h:outputText value="#{item.fechaFusion}" />
+				</p:column>
+
+
+			</p:dataTable>
+		</p:panel>
+
+
+	</h:form>
+
+
+</h:body>
+</html>

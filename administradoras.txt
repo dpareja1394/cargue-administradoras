@@ -1,0 +1,8 @@
+a1;Administradora 1;CC;101234;PR;;x;x;01012012
+a2;Administradora 2;CC;201234;PR;X;x;x;10032019
+a3;Administradora 3;NI;301234;PR;;x;x;29032019
+a4;Administradora 4;RC;401234;PR;;x;x;28022017
+a5;Administradora 5;PA;501234;PR;;x;x;19092016
+a6;Administradora 6;PA;601234;PR;;x;x;20012010
+a7;Administradora 7;NI;701234;PR;X;x;x;01082020
+a8;Administradora 8;NI;101234;PU;;x;x;01032012

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28/04/2019 12:24:31 AM by Hibernate Tools 5.1.0.Final -->
+<hibernate-mapping>
+	<class
+		name="com.lucasian.cargueadministradoras.modelo.Administradora"
+		table="ADMINISTRADORA" schema="DPAREJADEV" optimistic-lock="version">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" precision="5" scale="0" />
+			<generator class="org.hibernate.id.enhanced.SequenceStyleGenerator">
+			    <param name="optimizer">none</param>
+			    <param name="increment_size">1</param>
+			    <param name="sequence_name">SEQ_ID_ADMINISTRADORA</param>
+			</generator>
+		</id>
+		<property name="codigo" type="java.lang.String">
+			<column name="CODIGO" length="20" not-null="true" />
+		</property>
+		<property name="nombre" type="java.lang.String">
+			<column name="NOMBRE" length="200" not-null="true" />
+		</property>
+		<property name="codTpId" type="java.lang.String">
+			<column name="COD_TP_ID" length="2" not-null="true" />
+		</property>
+		<property name="nroId" type="java.lang.String">
+			<column name="NRO_ID" length="50" not-null="true" />
+		</property>
+		<property name="naturaleza" type="java.lang.String">
+			<column name="NATURALEZA" length="20" not-null="true" />
+		</property>
+		<property name="multipleArp" type="java.lang.Long">
+			<column name="MULTIPLE_ARP" precision="1" scale="0" />
+		</property>
+		<property name="fsp" type="java.lang.Long">
+			<column name="FSP" precision="1" scale="0" />
+		</property>
+		<property name="fusionada" type="java.lang.Long">
+			<column name="FUSIONADA" precision="1" scale="0" />
+		</property>
+		<property name="fechaFusion" type="java.util.Date">
+			<column name="FECHA_FUSION" length="7" />
+		</property>
+	</class>
+</hibernate-mapping>
