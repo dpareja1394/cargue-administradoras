@@ -19,7 +19,7 @@
 		<spring.security.version>4.2.0.RELEASE</spring.security.version>
 		<mojarra.version>2.2.12</mojarra.version>
 		<slf4j.version>1.7.21</slf4j.version>
-		<log4j2.version>2.7</log4j2.version>
+		<log4j2.version>2.17.1</log4j2.version>
     </properties>
     
     
